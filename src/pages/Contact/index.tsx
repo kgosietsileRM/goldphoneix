@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'preact/hooks';
 import { ScrollTilt } from 'pax3d/react';
 import { EnquiryForm } from '../../components/EnquiryForm.jsx';
 import { Icon } from '../../components/Icon.jsx';
@@ -7,6 +8,11 @@ import { SectionHeading } from '../../components/SectionHeading.jsx';
 import { SITE } from '../../content/site.js';
 
 export function Contact() {
+	const [mapLoaded, setMapLoaded] = useState(false);
+	const [showMap, setShowMap] = useState(false);
+
+	useEffect(() => setShowMap(true), []);
+
 	return (
 		<>
 			<PageHero
@@ -173,12 +179,21 @@ export function Contact() {
 						</a>
 					</div>
 					<ScrollTilt className="map-frame" max={4} perspective={1100}>
-						<iframe
-							title="Map showing Goldphoenix Christian College in Daylesford, Gweru"
-							src={SITE.mapEmbedUrl}
-							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"
-						/>
+						{!mapLoaded && (
+							<div class="map-loading" aria-hidden="true">
+								<span class="map-spinner" />
+								<span>Loading map…</span>
+							</div>
+						)}
+						{showMap && (
+							<iframe
+								title="Map showing Goldphoenix Christian College in Daylesford, Gweru"
+								src={SITE.mapEmbedUrl}
+								loading="lazy"
+								onLoad={() => setMapLoaded(true)}
+								referrerpolicy="no-referrer-when-downgrade"
+							/>
+						)}
 					</ScrollTilt>
 				</div>
 			</section>

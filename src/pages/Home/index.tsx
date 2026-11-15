@@ -33,6 +33,7 @@ export function Home() {
 
 	return (
 		<>
+		<section class="hero" id="home">
 		<div class="hero-background" aria-hidden="true">
 			<div class="hero-grid-lines" />
 			<div class="hero-orb hero-orb-gold" />
@@ -172,6 +173,7 @@ export function Home() {
 				))}
 			</div>
 		</div>
+		</section>
 
 		<div class="purpose-strip" aria-hidden="true">
 			<Marquee speed={26} velocityBoost={0.5} copies={3}>
@@ -222,13 +224,7 @@ export function Home() {
 		</section>
 
 		<section class="purpose-scene-section" aria-labelledby="purpose-scene-title">
-			<Scene
-				sticky
-				height="260vh"
-				className="purpose-scene"
-				stickyClassName="purpose-scene-sticky"
-				perspective={1500}
-			>
+			<Scene className="purpose-scene" perspective={1500}>
 				<Layer
 					class="purpose-scene-backdrop"
 					y={['-6%', '6%']}
