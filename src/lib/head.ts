@@ -1,5 +1,6 @@
 import { useEffect } from 'preact/hooks';
 import { useLocation } from 'preact-iso';
+import { stripBase } from './paths.js';
 import { getPageSeo } from './seo.js';
 
 function upsertMeta(attribute: 'name' | 'property', key: string, content: string) {
@@ -35,7 +36,7 @@ function applyJsonLd(path: string, jsonLd: unknown[]) {
 }
 
 export function applyPageHead(inputUrl: string) {
-	const seo = getPageSeo(inputUrl);
+	const seo = getPageSeo(stripBase(inputUrl));
 	const socialImage = seo.image;
 
 	document.title = seo.title;

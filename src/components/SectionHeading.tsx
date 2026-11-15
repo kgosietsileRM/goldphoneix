@@ -1,5 +1,6 @@
 import type { ComponentChildren } from 'preact';
 import { SplitText } from 'pax3d/react';
+import { withBase } from '../lib/paths.js';
 import { Icon } from './Icon.jsx';
 
 type SectionHeadingProps = {
@@ -48,7 +49,7 @@ export function SectionHeading({
 			</SplitText>
 			{text && <div class="section-heading-text">{text}</div>}
 			{link && (
-				<a class="text-link" href={link.href}>
+				<a class="text-link" href={withBase(link.href)}>
 					{link.label}
 					<Icon name="arrow-right" size={17} />
 				</a>

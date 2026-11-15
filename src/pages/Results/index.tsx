@@ -3,6 +3,7 @@ import { Layer, Scene } from 'pax3d/react';
 import { Icon } from '../../components/Icon.jsx';
 import { PageHero } from '../../components/PageHero.jsx';
 import { PORTAL_DEMO } from '../../content/site.js';
+import { withBase } from '../../lib/paths.js';
 
 function averageMark() {
 	const total = PORTAL_DEMO.marks.reduce((sum, item) => sum + Number.parseInt(item.mark, 10), 0);
@@ -86,7 +87,7 @@ export function Results() {
 								Fictional learner and marks
 							</li>
 						</ul>
-						<a class="text-link" href="/contact">
+						<a class="text-link" href={withBase('/contact')}>
 							Ask about official results
 							<Icon name="arrow-right" size={17} />
 						</a>
@@ -104,7 +105,7 @@ export function Results() {
 						{!signedIn ? (
 							<div class="portal-login">
 								<div class="portal-head">
-									<img src="/media/crest-128.png" alt="" width="56" height="53" />
+									<img src={withBase('/media/crest-128.png')} alt="" width="56" height="53" />
 									<div>
 										<p class="eyebrow">Goldphoenix portal</p>
 										<h2>Sign in to the demo</h2>
@@ -165,7 +166,7 @@ export function Results() {
 							<div class="report">
 								<div class="report-head">
 									<div class="report-brand">
-										<img src="/media/crest-128.png" alt="" width="52" height="49" />
+										<img src={withBase('/media/crest-128.png')} alt="" width="52" height="49" />
 										<div>
 											<strong>Goldphoenix Christian College</strong>
 											<span>Sample academic report</span>

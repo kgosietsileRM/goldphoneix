@@ -1,11 +1,12 @@
 import { SITE } from '../content/site.js';
+import { withBase } from '../lib/paths.js';
 
 export function Logo({ compact = false }: { compact?: boolean }) {
 	return (
 		<span class="logo">
 			<img
 				class="logo-crest"
-				src={SITE.logoSmall}
+				src={withBase(SITE.logoSmall)}
 				alt=""
 				width="44"
 				height="41"

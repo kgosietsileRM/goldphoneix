@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'preact/hooks';
 import { useLocation } from 'preact-iso';
 import { NAV, SITE } from '../content/site.js';
+import { stripBase, withBase } from '../lib/paths.js';
 import { normalizePath } from '../lib/seo.js';
 import { Icon } from './Icon.jsx';
 import { Logo } from './Logo.jsx';
@@ -23,7 +24,7 @@ export const BaseHeader = () => {
 
 export function Header() {
 	const { url } = useLocation();
-	const path = normalizePath(url);
+	const path = normalizePath(stripBase(url));
 	const [open, setOpen] = useState(false);
 
 	useEffect(() => {
@@ -71,14 +72,14 @@ export function Header() {
 
 			<div class="navbar">
 				<div class="container navbar-inner">
-					<a class="brand" href="/" aria-label="Goldphoenix Christian College home">
+					<a class="brand" href={withBase('/')} aria-label="Goldphoenix Christian College home">
 						<Logo />
 					</a>
 
 					<nav class="desktop-nav" aria-label="Primary">
 						{NAV.map((item) => (
 							<a
-								href={item.href}
+								href={withBase(item.href)}
 								class={isActive(item.href) ? 'nav-link is-active' : 'nav-link'}
 								aria-current={isActive(item.href) ? 'page' : undefined}
 							>
@@ -88,11 +89,11 @@ export function Header() {
 					</nav>
 
 					<div class="nav-actions">
-						<a class="portal-link" href="/results">
+						<a class="portal-link" href={withBase('/results')}>
 							<Icon name="lock" size={16} />
 							Results
 						</a>
-						<a class="btn btn-gold btn-sm" href="/admissions#enquiry">
+						<a class="btn btn-gold btn-sm" href={withBase('/admissions#enquiry')}>
 							Enquire
 							<Icon name="arrow-up-right" size={16} />
 						</a>
@@ -114,7 +115,7 @@ export function Header() {
 				<nav class="mobile-nav" aria-label="Mobile">
 					{NAV.map((item, index) => (
 						<a
-							href={item.href}
+							href={withBase(item.href)}
 							class={isActive(item.href) ? 'mobile-link is-active' : 'mobile-link'}
 							style={{ '--i': String(index) }}
 							aria-current={isActive(item.href) ? 'page' : undefined}
@@ -123,14 +124,14 @@ export function Header() {
 							<Icon name="arrow-right" size={20} />
 						</a>
 					))}
-					<a class="mobile-link mobile-link-accent" href="/results" style={{ '--i': String(NAV.length) }}>
+					<a class="mobile-link mobile-link-accent" href={withBase('/results')} style={{ '--i': String(NAV.length) }}>
 						<span>Results portal</span>
 						<Icon name="lock" size={18} />
 					</a>
 				</nav>
 
 				<div class="mobile-contact">
-					<a class="btn btn-gold" href="/admissions#enquiry">
+					<a class="btn btn-gold" href={withBase('/admissions#enquiry')}>
 						Start an enquiry
 						<Icon name="arrow-up-right" size={18} />
 					</a>

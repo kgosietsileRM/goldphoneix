@@ -5,6 +5,7 @@ import { PageHero } from '../../components/PageHero.jsx';
 import { RevealCard, RevealGrid } from '../../components/Reveal.jsx';
 import { SectionHeading } from '../../components/SectionHeading.jsx';
 import { LEADERSHIP, SITE, VALUES } from '../../content/site.js';
+import { withBase } from '../../lib/paths.js';
 
 const pillars = [
 	{
@@ -41,11 +42,11 @@ export function About() {
 				imageAlt="The Goldphoenix Christian College campus in Daylesford, Gweru"
 				crumbs={[{ label: 'Our School' }]}
 			>
-				<a class="btn btn-gold" href="/admissions#enquiry">
+				<a class="btn btn-gold" href={withBase('/admissions#enquiry')}>
 					Start an enquiry
 					<Icon name="arrow-up-right" size={18} />
 				</a>
-				<a class="btn btn-ghost-light" href="/contact">
+				<a class="btn btn-ghost-light" href={withBase('/contact')}>
 					Visit the campus
 					<Icon name="pin" size={18} />
 				</a>
@@ -92,7 +93,7 @@ export function About() {
 						<div class="media-stack about-media">
 							<ScrollTilt className="media-stack-main" max={7} perspective={950}>
 								<ParallaxImage
-									src="/media/campus-560.jpg"
+									src={withBase('/media/campus-560.jpg')}
 									alt="Goldphoenix Christian College campus building"
 									speed={0.14}
 									style={{ height: '100%' }}
@@ -199,7 +200,7 @@ export function About() {
 								<Icon name="pin" size={18} />
 								Open directions
 							</a>
-							<a class="btn btn-outline" href="/contact">
+							<a class="btn btn-outline" href={withBase('/contact')}>
 								Contact details
 								<Icon name="arrow-right" size={18} />
 							</a>

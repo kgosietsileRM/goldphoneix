@@ -4,6 +4,18 @@ import preact from '@preact/preset-vite';
 import { PRERENDER_ROUTES } from './src/content/site.ts';
 import { buildLlms, buildRobots, buildSitemap } from './src/lib/seo.ts';
 
+const env =
+	(globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env ?? {};
+const repo = env.GITHUB_REPOSITORY?.split('/')[1];
+const repositoryBase = repo
+	? repo.toLowerCase().endsWith('.github.io')
+		? '/'
+		: `/${repo}/`
+	: '/goldphoneix/';
+const configuredBase =
+	env.BASE_PATH ?? (env.GITHUB_ACTIONS ? repositoryBase : '/goldphoneix/');
+const base = configuredBase.endsWith('/') ? configuredBase : `${configuredBase}/`;
+
 function seoAssets(): Plugin {
 	return {
 		name: 'goldphoenix-seo-assets',
@@ -29,6 +41,7 @@ function seoAssets(): Plugin {
 }
 
 export default defineConfig({
+	base,
 	plugins: [
 		preact({
 			prerender: {

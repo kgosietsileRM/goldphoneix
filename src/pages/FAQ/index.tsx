@@ -1,4 +1,5 @@
 import { CtaBand } from '../../components/CtaBand.jsx';
+import { withBase } from '../../lib/paths.js';
 import { FaqList } from '../../components/FaqList.jsx';
 import { Icon } from '../../components/Icon.jsx';
 import { PageHero } from '../../components/PageHero.jsx';
@@ -35,7 +36,7 @@ export function FAQ() {
 						<div class="faq-nav-help">
 							<Icon name="mail" size={20} />
 							<p>Still have a question?</p>
-							<a href="/contact">Contact the college</a>
+							<a href={withBase('/contact')}>Contact the college</a>
 						</div>
 					</aside>
 

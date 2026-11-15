@@ -1,5 +1,6 @@
 import { Layer, Scene } from 'pax3d/react';
 import { SITE } from '../content/site.js';
+import { withBase } from '../lib/paths.js';
 import { Icon } from './Icon.jsx';
 
 type CtaBandProps = {
@@ -31,7 +32,7 @@ export function CtaBand({
 				reduced="disable"
 				aria-hidden="true"
 			>
-				<img src="/media/bg-2.jpg" alt="" loading="lazy" decoding="async" />
+				<img src={withBase('/media/bg-2.jpg')} alt="" loading="lazy" decoding="async" />
 			</Layer>
 			<Layer
 				class="cta-band-pattern"
@@ -54,11 +55,11 @@ export function CtaBand({
 					<p>{text}</p>
 				</div>
 				<div class="cta-band-actions">
-					<a class="btn btn-gold" href={primaryHref}>
+					<a class="btn btn-gold" href={withBase(primaryHref)}>
 						{primaryLabel}
 						<Icon name="arrow-up-right" size={18} />
 					</a>
-					<a class="btn btn-ghost-light" href={secondaryHref}>
+					<a class="btn btn-ghost-light" href={withBase(secondaryHref)}>
 						<Icon name={secondaryHref.startsWith('tel:') ? 'phone' : 'mail'} size={18} />
 						{secondaryLabel}
 					</a>

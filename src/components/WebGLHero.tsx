@@ -1,4 +1,5 @@
 import { CanvasScene, ShaderPlane } from 'pax3d/three';
+import { withBase } from '../lib/paths.js';
 
 const fragmentShader = `
 precision highp float;
@@ -64,7 +65,7 @@ export default function WebGLHero() {
 			aria-hidden="true"
 		>
 			<ShaderPlane
-				source="/media/students.jpg"
+				source={withBase('/media/students.jpg')}
 				match="#hero"
 				fragmentShader={fragmentShader}
 				damping={0.08}

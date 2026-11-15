@@ -1,5 +1,6 @@
 import { ParallaxImage, ScrollTilt } from 'pax3d/react';
 import { CtaBand } from '../../components/CtaBand.jsx';
+import { withBase } from '../../lib/paths.js';
 import { Icon } from '../../components/Icon.jsx';
 import { PageHero } from '../../components/PageHero.jsx';
 import { RevealCard, RevealGrid } from '../../components/Reveal.jsx';
@@ -23,7 +24,7 @@ export function SchoolLife() {
 				imageAlt="Goldphoenix Christian College campus"
 				crumbs={[{ label: 'School Life' }]}
 			>
-				<a class="btn btn-gold" href="/admissions#enquiry">
+				<a class="btn btn-gold" href={withBase('/admissions#enquiry')}>
 					Ask about school life
 					<Icon name="arrow-up-right" size={18} />
 				</a>
@@ -61,7 +62,7 @@ export function SchoolLife() {
 								</span>
 								<h3>{pathway.title}</h3>
 								<p>{pathway.text}</p>
-								<a class="text-link" href="/admissions#enquiry">
+								<a class="text-link" href={withBase('/admissions#enquiry')}>
 									{pathway.link}
 									<Icon name="arrow-right" size={17} />
 								</a>
@@ -110,7 +111,7 @@ export function SchoolLife() {
 						<div class="media-stack">
 							<ScrollTilt className="media-stack-main" max={7} perspective={950}>
 								<ParallaxImage
-									src="/media/students.jpg"
+									src={withBase('/media/students.jpg')}
 									alt="Goldphoenix learners together"
 									speed={0.15}
 									style={{ height: '100%' }}
@@ -118,7 +119,7 @@ export function SchoolLife() {
 							</ScrollTilt>
 							<ScrollTilt className="media-stack-secondary" max={5} perspective={1000}>
 								<ParallaxImage
-									src="/media/student.jpg"
+									src={withBase('/media/student.jpg')}
 									alt="A Goldphoenix learner taking part in school life"
 									speed={0.1}
 									style={{ height: '100%' }}
@@ -157,7 +158,7 @@ export function SchoolLife() {
 								</RevealCard>
 							))}
 						</RevealGrid>
-						<a class="btn btn-navy" href="/contact">
+						<a class="btn btn-navy" href={withBase('/contact')}>
 							Ask about current activities
 							<Icon name="arrow-right" size={18} />
 						</a>
@@ -180,7 +181,7 @@ export function SchoolLife() {
 							}
 							light
 						/>
-						<a class="btn btn-gold" href="/contact">
+						<a class="btn btn-gold" href={withBase('/contact')}>
 							Speak with the school
 							<Icon name="arrow-right" size={18} />
 						</a>

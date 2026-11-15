@@ -14,6 +14,7 @@ import {
 	STATS,
 	VALUES,
 } from '../../content/site.js';
+import { withBase } from '../../lib/paths.js';
 
 const WebGLHero = lazy(() => import('../../components/WebGLHero.jsx'));
 
@@ -58,11 +59,11 @@ export function Home() {
 					confidence grow together — from Grade 1 to Form 6.
 				</p>
 				<div class="hero-actions">
-					<a class="btn btn-gold" href="/admissions#enquiry">
+					<a class="btn btn-gold" href={withBase('/admissions#enquiry')}>
 						Start an enquiry
 						<Icon name="arrow-up-right" size={18} />
 					</a>
-					<a class="btn btn-ghost-light" href="/about">
+					<a class="btn btn-ghost-light" href={withBase('/about')}>
 						Discover our school
 						<Icon name="arrow-right" size={18} />
 					</a>
@@ -98,7 +99,7 @@ export function Home() {
 							<figure class="hero-photo-card">
 								<div class="hero-photo-frame">
 									<img
-										src={SITE.heroImage}
+										src={withBase(SITE.heroImage)}
 										alt="Students at Goldphoenix Christian College in Gweru"
 										width="1016"
 										height="856"
@@ -108,7 +109,7 @@ export function Home() {
 								</div>
 								<figcaption class="hero-photo-caption">
 									<span class="hero-photo-crest">
-										<img src={SITE.logoSmall} alt="" width="44" height="41" />
+										<img src={withBase(SITE.logoSmall)} alt="" width="44" height="41" />
 									</span>
 									<span>
 										<strong>Goldphoenix</strong>
@@ -203,15 +204,15 @@ export function Home() {
 						1–7 and secondary education from Form 1–6.
 					</p>
 					<div class="quick-answer-links">
-						<a href="/academics">
+						<a href={withBase('/academics')}>
 							<Icon name="book" size={17} />
 							Explore academics
 						</a>
-						<a href="/admissions">
+						<a href={withBase('/admissions')}>
 							<Icon name="arrow-right" size={17} />
 							Admissions steps
 						</a>
-						<a href="/contact">
+						<a href={withBase('/contact')}>
 							<Icon name="pin" size={17} />
 							Find the campus
 						</a>
@@ -236,7 +237,7 @@ export function Home() {
 					reduced="disable"
 					aria-hidden="true"
 				>
-					<ParallaxImage src="/media/bg-3.jpg" alt="" speed={0.08} style={{ height: '100%' }} />
+					<ParallaxImage src={withBase('/media/bg-3.jpg')} alt="" speed={0.08} style={{ height: '100%' }} />
 				</Layer>
 
 				<Layer
@@ -250,7 +251,7 @@ export function Home() {
 				>
 					<figure class="purpose-scene-photo">
 						<img
-							src="/media/campus%20no-bg.jpg"
+							src={withBase('/media/campus%20no-bg.jpg')}
 							alt="Goldphoenix Christian College campus"
 							width="896"
 							height="1200"
@@ -305,7 +306,7 @@ export function Home() {
 							A Goldphoenix education brings strong learning, Christian character and a
 							confident next step together.
 						</p>
-						<a class="text-link" href="/about">
+						<a class="text-link" href={withBase('/about')}>
 							Explore our approach
 							<Icon name="arrow-right" size={17} />
 						</a>
@@ -365,14 +366,14 @@ export function Home() {
 					<div class="media-stack">
 						<ScrollTilt className="media-stack-main" max={7} perspective={950}>
 							<ParallaxImage
-								src="/media/students-640.jpg"
+								src={withBase('/media/students-640.jpg')}
 								alt="Goldphoenix learners together on campus"
 								speed={0.16}
 								style={{ height: '100%' }}
 							/>
 						</ScrollTilt>
 						<div class="media-stack-badge">
-							<img src={SITE.logoSmall} alt="" width="54" height="51" />
+							<img src={withBase(SITE.logoSmall)} alt="" width="54" height="51" />
 							<span>
 								<strong>One community</strong>
 								<small>Grade 1 to Form 6</small>
@@ -402,7 +403,7 @@ export function Home() {
 							</RevealCard>
 						))}
 					</RevealGrid>
-					<a class="btn btn-navy" href="/about">
+					<a class="btn btn-navy" href={withBase('/about')}>
 						About Goldphoenix
 						<Icon name="arrow-right" size={18} />
 					</a>
@@ -454,7 +455,7 @@ export function Home() {
 							<p class="program-grades">{program.grades}</p>
 							<h3>{program.title}</h3>
 							<p class="program-text">{program.text}</p>
-							<a class="text-link" href={program.href}>
+							<a class="text-link" href={withBase(program.href)}>
 								{program.link}
 								<Icon name="arrow-right" size={17} />
 							</a>
@@ -526,7 +527,7 @@ export function Home() {
 						}
 						light
 					/>
-					<a class="btn btn-gold" href="/school-life">
+					<a class="btn btn-gold" href={withBase('/school-life')}>
 						Explore school life
 						<Icon name="arrow-right" size={18} />
 					</a>
@@ -558,7 +559,7 @@ export function Home() {
 							<span class="notice-tag">{notice.tag}</span>
 							<h3>{notice.title}</h3>
 							<p>{notice.text}</p>
-							<a class="text-link" href={notice.href}>
+							<a class="text-link" href={withBase(notice.href)}>
 								{notice.link}
 								<Icon name="arrow-right" size={17} />
 							</a>

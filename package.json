@@ -1,9 +1,10 @@
 {
 	"private": true,
 	"type": "module",
+	"packageManager": "pnpm@12.4.1",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "vite build && node scripts/postbuild.mjs",
 		"preview": "vite preview"
 	},
 	"dependencies": {

@@ -5,6 +5,7 @@ import { PageHero } from '../../components/PageHero.jsx';
 import { RevealCard, RevealGrid } from '../../components/Reveal.jsx';
 import { SectionHeading } from '../../components/SectionHeading.jsx';
 import { SITE } from '../../content/site.js';
+import { withBase } from '../../lib/paths.js';
 
 const approach = [
 	{
@@ -56,7 +57,7 @@ export function Academics() {
 				imageAlt="Learners at Goldphoenix Christian College"
 				crumbs={[{ label: 'Academics' }]}
 			>
-				<a class="btn btn-gold" href="/admissions#enquiry">
+				<a class="btn btn-gold" href={withBase('/admissions#enquiry')}>
 					Ask about a place
 					<Icon name="arrow-up-right" size={18} />
 				</a>
@@ -117,7 +118,7 @@ export function Academics() {
 								<span>Care, routines and positive relationships</span>
 							</div>
 						</div>
-						<a class="text-link" href="/admissions#enquiry">
+						<a class="text-link" href={withBase('/admissions#enquiry')}>
 							Ask about primary admissions
 							<Icon name="arrow-right" size={17} />
 						</a>
@@ -125,7 +126,7 @@ export function Academics() {
 					<div class="stage-media">
 						<ScrollTilt className="stage-media-frame" max={6} perspective={950}>
 							<ParallaxImage
-								src="/media/students%20in%20classroom.jpg"
+								src={withBase('/media/students%20in%20classroom.jpg')}
 								alt="Primary learners in a classroom at Goldphoenix Christian College"
 								speed={0.13}
 								style={{ height: '100%' }}
@@ -166,7 +167,7 @@ export function Academics() {
 								<span>Guidance, feedback and next-step preparation</span>
 							</div>
 						</div>
-						<a class="text-link" href="/admissions#enquiry">
+						<a class="text-link" href={withBase('/admissions#enquiry')}>
 							Ask about secondary admissions
 							<Icon name="arrow-right" size={17} />
 						</a>
@@ -174,7 +175,7 @@ export function Academics() {
 					<div class="stage-media">
 						<ScrollTilt className="stage-media-frame" max={6} perspective={950}>
 							<ParallaxImage
-								src="/media/campus.jpg"
+								src={withBase('/media/campus.jpg')}
 								alt="Secondary school grounds at Goldphoenix Christian College"
 								speed={0.13}
 								style={{ height: '100%' }}
@@ -232,7 +233,7 @@ export function Academics() {
 							}
 							light
 						/>
-						<a class="btn btn-gold" href="/contact">
+						<a class="btn btn-gold" href={withBase('/contact')}>
 							Ask about subjects
 							<Icon name="arrow-right" size={18} />
 						</a>

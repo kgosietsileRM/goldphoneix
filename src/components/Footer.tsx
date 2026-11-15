@@ -1,4 +1,5 @@
 import { NAV, SITE } from '../content/site.js';
+import { withBase } from '../lib/paths.js';
 import { Icon } from './Icon.jsx';
 import { Logo } from './Logo.jsx';
 
@@ -8,7 +9,7 @@ export function Footer() {
 			<div class="footer-glow" aria-hidden="true" />
 			<div class="container footer-grid">
 				<div class="footer-brand">
-					<a href="/" class="footer-logo" aria-label="Goldphoenix Christian College home">
+					<a href={withBase('/')} class="footer-logo" aria-label="Goldphoenix Christian College home">
 						<Logo />
 					</a>
 					<p class="footer-tagline">Learning with Purpose</p>
@@ -32,7 +33,7 @@ export function Footer() {
 					<ul class="footer-list">
 						{NAV.map((item) => (
 							<li>
-								<a href={item.href}>{item.label}</a>
+								<a href={withBase(item.href)}>{item.label}</a>
 							</li>
 						))}
 					</ul>
@@ -42,19 +43,19 @@ export function Footer() {
 					<h2 class="footer-title">For families</h2>
 					<ul class="footer-list">
 						<li>
-							<a href="/admissions">Admissions</a>
+							<a href={withBase('/admissions')}>Admissions</a>
 						</li>
 						<li>
-							<a href="/admissions#requirements">What to prepare</a>
+							<a href={withBase('/admissions#requirements')}>What to prepare</a>
 						</li>
 						<li>
-							<a href="/faq">Frequently asked questions</a>
+							<a href={withBase('/faq')}>Frequently asked questions</a>
 						</li>
 						<li>
-							<a href="/results">Results portal (demo)</a>
+							<a href={withBase('/results')}>Results portal (demo)</a>
 						</li>
 						<li>
-							<a href="/contact">Directions</a>
+							<a href={withBase('/contact')}>Directions</a>
 						</li>
 					</ul>
 				</div>

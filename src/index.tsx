@@ -4,6 +4,7 @@ import { ScrollProgress } from 'pax3d/react';
 import { Footer } from './components/Footer.jsx';
 import { Header } from './components/Header.jsx';
 import { usePageHead, useRouteScroll } from './lib/head.js';
+import { BASE_PATH, stripBase } from './lib/paths.js';
 import { getSeoHead } from './lib/seo.js';
 import { About } from './pages/About/index.jsx';
 import { Academics } from './pages/Academics/index.jsx';
@@ -15,6 +16,17 @@ import { Results } from './pages/Results/index.jsx';
 import { SchoolLife } from './pages/SchoolLife/index.jsx';
 import { NotFound } from './pages/_404.jsx';
 import './style.css';
+
+const APP_ROUTES = [
+	{ path: '/', component: Home },
+	{ path: '/about', component: About },
+	{ path: '/academics', component: Academics },
+	{ path: '/school-life', component: SchoolLife },
+	{ path: '/admissions', component: Admissions },
+	{ path: '/contact', component: Contact },
+	{ path: '/faq', component: FAQ },
+	{ path: '/results', component: Results },
+];
 
 function AppFrame() {
 	usePageHead();
@@ -30,14 +42,17 @@ function AppFrame() {
 			<Header />
 			<main id="main">
 				<Router>
-					<Route path="/" component={Home} />
-					<Route path="/about" component={About} />
-					<Route path="/academics" component={Academics} />
-					<Route path="/school-life" component={SchoolLife} />
-					<Route path="/admissions" component={Admissions} />
-					<Route path="/contact" component={Contact} />
-					<Route path="/faq" component={FAQ} />
-					<Route path="/results" component={Results} />
+					{APP_ROUTES.map(({ path, component }) => (
+						<Route path={path} component={component} />
+					))}
+					{BASE_PATH
+						? APP_ROUTES.map(({ path, component }) => (
+								<Route
+									path={path === '/' ? `${BASE_PATH}/` : `${BASE_PATH}${path}`}
+									component={component}
+								/>
+							))
+						: []}
 					<Route default component={NotFound} />
 				</Router>
 			</main>
@@ -62,5 +77,7 @@ if (typeof window !== 'undefined') {
 export async function prerender(data: { url: string }) {
 	const result = await ssr(<App />);
 	const head = getSeoHead(data.url);
-	return typeof result === 'string' ? { html: result, head } : { ...result, head };
+	if (typeof result === 'string') return { html: result, head };
+	const links = result.links ? Array.from(result.links, (link) => stripBase(link)) : result.links;
+	return { ...result, links, head };
 }

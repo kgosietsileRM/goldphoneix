@@ -1,5 +1,6 @@
 import { Icon } from '../components/Icon.jsx';
 import { NAV } from '../content/site.js';
+import { withBase } from '../lib/paths.js';
 
 export function NotFound() {
 	return (
@@ -14,18 +15,18 @@ export function NotFound() {
 					way back to Goldphoenix Christian College.
 				</p>
 				<div class="not-found-actions">
-					<a class="btn btn-gold" href="/">
+					<a class="btn btn-gold" href={withBase('/')}>
 						Return home
 						<Icon name="arrow-right" size={18} />
 					</a>
-					<a class="btn btn-ghost-light" href="/contact">
+					<a class="btn btn-ghost-light" href={withBase('/contact')}>
 						Contact the college
 						<Icon name="mail" size={18} />
 					</a>
 				</div>
 				<nav class="not-found-links" aria-label="Helpful links">
 					{NAV.filter((item) => item.href !== '/').map((item) => (
-						<a href={item.href}>
+						<a href={withBase(item.href)}>
 							{item.label}
 							<Icon name="arrow-up-right" size={16} />
 						</a>

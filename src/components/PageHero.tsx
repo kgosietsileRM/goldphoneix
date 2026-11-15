@@ -1,5 +1,6 @@
 import type { ComponentChildren } from 'preact';
 import { Layer, ParallaxImage, Scene, ScrollTilt, SplitText } from 'pax3d/react';
+import { withBase } from '../lib/paths.js';
 import { Icon } from './Icon.jsx';
 
 type Crumb = {
@@ -35,7 +36,7 @@ export function PageHero({
 			<div class="container page-hero-inner">
 				<Scene className="page-hero-scene" perspective={1300}>
 					<nav class="breadcrumbs" aria-label="Breadcrumb">
-						<a href="/">
+						<a href={withBase('/')}>
 							<Icon name="home" size={14} />
 							Home
 						</a>
@@ -44,7 +45,7 @@ export function PageHero({
 								<span class="crumb-sep" aria-hidden="true">
 									/
 								</span>
-								{crumb.href ? <a href={crumb.href}>{crumb.label}</a> : <span aria-current="page">{crumb.label}</span>}
+								{crumb.href ? <a href={withBase(crumb.href)}>{crumb.label}</a> : <span aria-current="page">{crumb.label}</span>}
 							</>
 						))}
 					</nav>
@@ -88,13 +89,13 @@ export function PageHero({
 								>
 									<ScrollTilt className="page-hero-media-frame" max={6} perspective={900}>
 										<ParallaxImage
-											src={image}
+											src={withBase(image)}
 											alt={imageAlt}
 											speed={0.12}
 											style={{ height: '100%' }}
 										/>
 										<span class="page-hero-media-badge">
-											<img src="/media/crest-128.png" alt="" width="44" height="41" />
+											<img src={withBase('/media/crest-128.png')} alt="" width="44" height="41" />
 											<span>
 												<strong>Goldphoenix</strong>
 												<small>Christian College</small>
