@@ -1,12 +1,12 @@
 export const SITE = {
 	name: 'Goldphoenix Christian College',
 	shortName: 'Goldphoenix',
-	tagline: 'Learning with Purpose',
+	tagline: 'Excellence Beyond Expectations',
 	description:
-		'Goldphoenix Christian College is a private Christian day and boarding school in Daylesford, Gweru, Zimbabwe, offering Grade 1–7 and Form 1–6.',
+		'Goldphoenix Christian College is a private Christian boarding and day high school in Daylesford, Gweru, Zimbabwe, offering Form 1–6 secondary education.',
 	url: 'https://goldphoenixchristiancollege.co.zw',
 	email: 'goldphoenixchristiancollege@gmail.com',
-	phones: ['+263 77 604 5757', '+263 713 056 741', '+263 716 166 326'],
+	phones: ['+263772969662', '+263716166326'],
 	address: {
 		street: '13 Claremont Road',
 		suburb: 'Daylesford',
@@ -21,12 +21,13 @@ export const SITE = {
 	directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=-19.492362%2C29.869037',
 	mapEmbedUrl: 'https://www.google.com/maps?q=-19.492362,29.869037&z=16&output=embed',
 	facebook: 'https://www.facebook.com/profile.php?id=61581874334790',
-	grades: 'Grade 1–7 · Form 1–6',
+	whatsapp: 'https://wa.me/263772969662',
+	grades: 'Form 1–6',
 	pathways: 'Day & boarding',
-	logo: '/media/crest.png',
-	logoSmall: '/media/crest-128.png',
-	heroImage: '/media/students.jpg',
-	campusImage: '/media/campus.jpg',
+	logo: '/media/logo-1080.svg',
+	logoSmall: '/media/logo-100.svg',
+	heroImage: '/media/img%200%20-%202%20girls%20in%20class.jpg',
+	campusImage: '/media/img%201%20-%203%20girls%20outside.jpg',
 	themeColor: '#0b1059',
 };
 
@@ -44,6 +45,79 @@ export const NAV: NavItem[] = [
 	{ label: 'Contact', href: '/contact' },
 ];
 
+export const GALLERY: { src: string; alt: string; caption: string }[] = [
+	{
+		src: '/media/img%200%20-%202%20girls%20in%20class.jpg',
+		alt: 'Goldphoenix learners working together in class',
+		caption: 'Learning together',
+	},
+	{
+		src: '/media/img%200%20-%20boy%20in%20class.jpg',
+		alt: 'A Goldphoenix learner focused in class',
+		caption: 'Focused learning',
+	},
+	{
+		src: '/media/students%20in%20classroom.jpg',
+		alt: 'Goldphoenix learners in the classroom',
+		caption: 'Inside the classroom',
+	},
+	{
+		src: '/media/img%200%20-%203%20girls%20outside.jpg',
+		alt: 'Goldphoenix learners together outside',
+		caption: 'Time outside',
+	},
+	{
+		src: '/media/img%201%20-%202%20girls%20outside.jpg',
+		alt: 'Two Goldphoenix learners outside',
+		caption: 'Friendships',
+	},
+	{
+		src: '/media/img%201%20-%203%20girls%20outside.jpg',
+		alt: 'Three Goldphoenix learners outside',
+		caption: 'School community',
+	},
+	{
+		src: '/media/img%201%20-%203%20girls%20outside%20v2.jpg',
+		alt: 'Goldphoenix learners together outside',
+		caption: 'Shared moments',
+	},
+	{
+		src: '/media/img-1-boy-girl-outside.jpg',
+		alt: 'Goldphoenix learners talking outside',
+		caption: 'Everyday conversations',
+	},
+	{
+		src: '/media/img%202%20passage%20-%202%20girls%20outside.jpg',
+		alt: 'Goldphoenix learners in the passage',
+		caption: 'Between lessons',
+	},
+	{
+		src: '/media/img%202%20passage%20-%202%20girls%20outside%20v2.jpg',
+		alt: 'Goldphoenix learners in the school passage',
+		caption: 'Campus life',
+	},
+	{
+		src: '/media/img-2-passage-boy-girl-outside.jpg',
+		alt: 'Goldphoenix learners walking through the passage',
+		caption: 'Moving through the day',
+	},
+	{
+		src: '/media/img-2-passage-boy-girl-outside-v2.jpg',
+		alt: 'Goldphoenix learners in the passage',
+		caption: 'Learning community',
+	},
+	{
+		src: '/media/img-2-passage-boy-girl-outside-v3.jpg',
+		alt: 'Goldphoenix learners together in the passage',
+		caption: 'Together at Goldphoenix',
+	},
+	{
+		src: '/media/img%203%20-%20goup%20%20outside.jpeg',
+		alt: 'A group of Goldphoenix learners outside',
+		caption: 'A connected community',
+	},
+];
+
 export type SeoRoute = {
 	path: string;
 	title: string;
@@ -56,10 +130,10 @@ export type SeoRoute = {
 export const SEO_ROUTES: Record<string, SeoRoute> = {
 	'/': {
 		path: '/',
-		title: 'Goldphoenix Christian College | Learning with Purpose in Gweru',
+		title: 'Goldphoenix Christian College | Excellence Beyond Expectations in Gweru',
 		description:
-			'Goldphoenix Christian College is a private Christian day and boarding school in Daylesford, Gweru, offering Grade 1–7 and Form 1–6.',
-		preloadImage: '/media/students.jpg',
+			'Goldphoenix Christian College is a private Christian boarding and day high school in Daylesford, Gweru, offering Form 1–6 secondary education.',
+		preloadImage: '/media/img%200%20-%202%20girls%20in%20class.jpg',
 		updated: '2026-01-15',
 	},
 	'/about': {
@@ -71,16 +145,16 @@ export const SEO_ROUTES: Record<string, SeoRoute> = {
 	},
 	'/academics': {
 		path: '/academics',
-		title: 'Academics: Grade 1–7 and Form 1–6 | Goldphoenix Christian College',
+		title: 'Academics: Form 1–6 | Goldphoenix Christian College',
 		description:
-			'Explore primary and secondary learning at Goldphoenix Christian College, from Grade 1–7 foundations to Form 1–6 subject depth and support.',
+			'Explore Form 1–6 learning at Goldphoenix Christian College, including subject depth, study habits and support.',
 		updated: '2026-01-15',
 	},
 	'/school-life': {
 		path: '/school-life',
 		title: 'School Life: Day and Boarding | Goldphoenix Christian College',
 		description:
-			'Learn about day and boarding school life at Goldphoenix Christian College, including pastoral care, routines and co-curricular opportunities.',
+			'Learn about boarding and day high school life at Goldphoenix Christian College, including pastoral care, routines and co-curricular opportunities.',
 		updated: '2026-01-15',
 	},
 	'/admissions': {
@@ -101,7 +175,7 @@ export const SEO_ROUTES: Record<string, SeoRoute> = {
 		path: '/faq',
 		title: 'Frequently Asked Questions | Goldphoenix Christian College',
 		description:
-			'Answers to common questions about grades, day and boarding, admissions, the results portal and the location of Goldphoenix Christian College.',
+			'Answers to common questions about forms, day and boarding, admissions, the results portal and the location of Goldphoenix Christian College.',
 		updated: '2026-01-15',
 	},
 	'/results': {
@@ -136,17 +210,17 @@ export const PRERENDER_ROUTES = [
 ];
 
 export const FACTS = [
-	{ value: 'Grade 1–7', label: 'Primary school' },
 	{ value: 'Form 1–6', label: 'Secondary school' },
+	{ value: 'Christian ethos', label: 'Faith and character' },
 	{ value: 'Day & boarding', label: 'Two pathways' },
 	{ value: 'Gweru, Zimbabwe', label: 'Daylesford campus' },
 ];
 
 export const STATS = [
-	{ value: 13, suffix: '', label: 'Grade and form levels', detail: 'Grade 1–7 and Form 1–6' },
-	{ value: 7, suffix: '', label: 'Primary grades', detail: 'A connected start to school' },
-	{ value: 6, suffix: '', label: 'Secondary forms', detail: 'Growing subject depth and confidence' },
+	{ value: 6, suffix: '', label: 'Form levels', detail: 'Form 1 to Form 6' },
 	{ value: 2, suffix: '', label: 'School pathways', detail: 'Day and boarding options' },
+	{ value: 1, suffix: '', label: 'Daylesford campus', detail: '13 Claremont Road, Gweru' },
+	{ value: 'Faith', suffix: '', label: 'At the centre', detail: 'Character, care and service' },
 ];
 
 export const VALUES = [
@@ -185,26 +259,16 @@ export const VALUES = [
 export const PROGRAMS = [
 	{
 		number: '01',
-		symbol: 'primary',
-		title: 'Primary School',
-		grades: 'Grade 1–7',
-		text: 'Building confident readers, curious thinkers and strong foundations for lifelong learning.',
-		href: '/academics#primary',
-		link: 'Explore primary learning',
-		featured: false,
-	},
-	{
-		number: '02',
 		symbol: 'secondary',
 		title: 'Secondary School',
 		grades: 'Form 1–6',
 		text: 'Deepening subject knowledge, discovering strengths and preparing for the next step.',
 		href: '/academics#secondary',
-		link: 'Explore secondary learning',
+		link: 'Explore Form 1–6 learning',
 		featured: true,
 	},
 	{
-		number: '03',
+		number: '02',
 		symbol: 'home',
 		title: 'Day & Boarding',
 		grades: 'Two pathways',
@@ -289,22 +353,30 @@ export const ADMISSION_STEPS = [
 	{
 		step: '01',
 		title: 'Start an enquiry',
-		text: 'Share your child’s details, the grade or form you are considering, and your preferred pathway.',
+		text: 'Share your child’s details, the form you are considering, and your preferred pathway.',
+		image: '/media/img%200%20-%202%20girls%20in%20class.jpg',
+		alt: 'Goldphoenix learners working together in class',
 	},
 	{
 		step: '02',
 		title: 'Talk with the school',
 		text: 'The admissions team can explain available places, requirements, fees and boarding arrangements.',
+		image: '/media/img-1-boy-girl-outside.jpg',
+		alt: 'Goldphoenix learners talking outside',
 	},
 	{
 		step: '03',
 		title: 'Prepare and apply',
 		text: 'Complete the school’s current application requirements and provide the requested documents.',
+		image: '/media/img%200%20-%20boy%20in%20class.jpg',
+		alt: 'A Goldphoenix learner focused in class',
 	},
 	{
 		step: '04',
 		title: 'Confirm and enrol',
 		text: 'Once placement is confirmed, the college guides your family through the next steps.',
+		image: '/media/img%203%20-%20goup%20%20outside.jpeg',
+		alt: 'A group of Goldphoenix learners outside',
 	},
 ];
 
@@ -325,12 +397,6 @@ export const LEADERSHIP = [
 		text: 'Guiding the school’s ethos, learning direction and community life.',
 	},
 	{
-		initials: 'G1–7',
-		title: 'Primary Department',
-		role: 'Primary teachers and grade leads',
-		text: 'Supporting foundational learning, confidence and curiosity.',
-	},
-	{
 		initials: 'F1–6',
 		title: 'Secondary Department',
 		role: 'Subject teachers and form leads',
@@ -348,7 +414,7 @@ export const NOTICES = [
 	{
 		tag: 'Admissions',
 		title: 'Enrolment enquiries are welcome',
-		text: 'Grade 1–7 and Form 1–6 enquiries can be started online, by phone or by email.',
+		text: 'Form 1–6 enquiries can be started online, by phone or by email.',
 		href: '/admissions',
 		link: 'Start an enquiry',
 	},
@@ -370,7 +436,7 @@ export const NOTICES = [
 
 export type FaqGroup =
 	| 'Admissions'
-	| 'Grades and stages'
+	| 'Forms and stages'
 	| 'Day and boarding'
 	| 'Results portal'
 	| 'Location and contact';
@@ -383,9 +449,9 @@ export type FaqItem = {
 
 export const FAQS: FaqItem[] = [
 	{
-		q: 'Which grades and forms does Goldphoenix Christian College offer?',
-		a: 'Goldphoenix Christian College offers primary education from Grade 1 to Grade 7 and secondary education from Form 1 to Form 6.',
-		group: 'Grades and stages',
+		q: 'Which forms does Goldphoenix Christian College offer?',
+		a: 'Goldphoenix Christian College offers secondary education from Form 1 to Form 6.',
+		group: 'Forms and stages',
 	},
 	{
 		q: 'Where is Goldphoenix Christian College located?',
@@ -419,7 +485,7 @@ export const FAQS: FaqItem[] = [
 	},
 	{
 		q: 'Which contact numbers can families use?',
-		a: 'The college lists +263 77 604 5757, +263 713 056 741 and +263 716 166 326. You can also email goldphoenixchristiancollege@gmail.com.',
+		a: 'The college lists +263772969662 and +263716166326. You can also email goldphoenixchristiancollege@gmail.com.',
 		group: 'Location and contact',
 	},
 	{
@@ -428,9 +494,9 @@ export const FAQS: FaqItem[] = [
 		group: 'Admissions',
 	},
 	{
-		q: 'What is the difference between primary and secondary at the college?',
-		a: 'Primary school covers Grade 1–7 and focuses on strong foundations, confident reading and curiosity. Secondary school covers Form 1–6 and supports deeper subject knowledge, study habits and preparation for the next step.',
-		group: 'Grades and stages',
+		q: 'What does Form 1–6 cover?',
+		a: 'Form 1–6 provides secondary education with growing subject depth, study habits and preparation for the next step. Contact the college for the current subject list and options.',
+		group: 'Forms and stages',
 	},
 	{
 		q: 'How do I ask about fees and available places?',
@@ -446,7 +512,7 @@ export const FAQS: FaqItem[] = [
 
 export const FAQ_GROUPS: FaqGroup[] = [
 	'Admissions',
-	'Grades and stages',
+	'Forms and stages',
 	'Day and boarding',
 	'Results portal',
 	'Location and contact',
@@ -456,7 +522,7 @@ export const PORTAL_DEMO = {
 	studentId: 'DEMO-001',
 	pin: '2026',
 	learner: 'Sample Learner',
-	class: 'Grade 7',
+	class: 'Form 6',
 	term: 'Term 2 · 2026',
 	marks: [
 		{ subject: 'English Language', mark: '78%', grade: 'A' },

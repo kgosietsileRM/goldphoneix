@@ -1,11 +1,12 @@
 import { ParallaxImage, ScrollTilt } from 'pax3d/react';
+import { CardPhoto } from '../../components/CardPhoto.jsx';
 import { CtaBand } from '../../components/CtaBand.jsx';
 import { withBase } from '../../lib/paths.js';
 import { Icon } from '../../components/Icon.jsx';
 import { PageHero } from '../../components/PageHero.jsx';
 import { RevealCard, RevealGrid } from '../../components/Reveal.jsx';
 import { SectionHeading } from '../../components/SectionHeading.jsx';
-import { BEYOND_CLASSROOM, DAY_IN_LIFE, PATHWAYS, SITE } from '../../content/site.js';
+import { BEYOND_CLASSROOM, DAY_IN_LIFE, GALLERY, PATHWAYS, SITE } from '../../content/site.js';
 
 export function SchoolLife() {
 	return (
@@ -111,16 +112,16 @@ export function SchoolLife() {
 						<div class="media-stack">
 							<ScrollTilt className="media-stack-main" max={7} perspective={950}>
 								<ParallaxImage
-									src={withBase('/media/students.jpg')}
-									alt="Goldphoenix learners together"
+									src={withBase('/media/students%20in%20classroom.jpg')}
+									alt="Goldphoenix learners together in class"
 									speed={0.15}
 									style={{ height: '100%' }}
 								/>
 							</ScrollTilt>
 							<ScrollTilt className="media-stack-secondary" max={5} perspective={1000}>
 								<ParallaxImage
-									src={withBase('/media/student.jpg')}
-									alt="A Goldphoenix learner taking part in school life"
+									src={withBase('/media/img%201%20-%202%20girls%20outside.jpg')}
+									alt="Goldphoenix learners together outside"
 									speed={0.1}
 									style={{ height: '100%' }}
 								/>
@@ -166,6 +167,35 @@ export function SchoolLife() {
 				</div>
 			</section>
 
+			<section class="section section-cream" id="gallery">
+				<div class="container">
+					<SectionHeading
+						eyebrow="Life at Goldphoenix"
+						title="Moments from across the school."
+						text={
+							<p>
+								Classroom focus, shared routines and time together all shape the Goldphoenix
+								experience.
+							</p>
+						}
+						align="center"
+					/>
+					<RevealGrid className="gallery-grid" amount={0.05} perspective={1200}>
+						{GALLERY.map((photo) => (
+							<RevealCard as="figure" class="gallery-card" y={['18%', '0%']} rotateX={[5, 0]}>
+								<img
+									src={withBase(photo.src)}
+									alt={photo.alt}
+									loading="lazy"
+									decoding="async"
+								/>
+								<figcaption>{photo.caption}</figcaption>
+							</RevealCard>
+						))}
+					</RevealGrid>
+				</div>
+			</section>
+
 			<section class="section band-navy">
 				<div class="container care-grid">
 					<div>
@@ -188,16 +218,28 @@ export function SchoolLife() {
 					</div>
 					<RevealGrid className="care-cards" amount={0.06} perspective={1000}>
 						<RevealCard class="care-card" y={['22%', '0%']} rotateX={[7, 0]} rotateY={[4, 0]}>
+							<CardPhoto
+								src="/media/img%200%20-%20boy%20in%20class.jpg"
+								alt="A Goldphoenix learner focused in class"
+							/>
 							<Icon name="shield" size={24} />
 							<h3>Clear expectations</h3>
 							<p>Routines and boundaries that help the community live and learn well together.</p>
 						</RevealCard>
 						<RevealCard class="care-card" y={['22%', '0%']} rotateX={[7, 0]} rotateY={[-4, 0]}>
+							<CardPhoto
+								src="/media/img%201%20-%203%20girls%20outside.jpg"
+								alt="Goldphoenix learners together outside"
+							/>
 							<Icon name="people" size={24} />
 							<h3>Belonging</h3>
 							<p>Relationships between learners, staff and families are treated as important.</p>
 						</RevealCard>
 						<RevealCard class="care-card" y={['22%', '0%']} rotateX={[7, 0]} rotateY={[4, 0]}>
+							<CardPhoto
+								src="/media/img-2-passage-boy-girl-outside.jpg"
+								alt="Goldphoenix learners in the school passage"
+							/>
 							<Icon name="home" size={24} />
 							<h3>Boarding information</h3>
 							<p>
@@ -206,6 +248,10 @@ export function SchoolLife() {
 							</p>
 						</RevealCard>
 						<RevealCard class="care-card" y={['22%', '0%']} rotateX={[7, 0]} rotateY={[-4, 0]}>
+							<CardPhoto
+								src="/media/img%202%20passage%20-%202%20girls%20outside%20v2.jpg"
+								alt="Goldphoenix learners in the passage"
+							/>
 							<Icon name="clock" size={24} />
 							<h3>Daily timetable</h3>
 							<p>Contact the college for current start and finish times and transport notes.</p>

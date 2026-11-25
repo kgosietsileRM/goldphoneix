@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'preact/hooks';
 import { ScrollTilt } from 'pax3d/react';
+import { CardPhoto } from '../../components/CardPhoto.jsx';
 import { EnquiryForm } from '../../components/EnquiryForm.jsx';
 import { Icon } from '../../components/Icon.jsx';
 import { PageHero } from '../../components/PageHero.jsx';
@@ -21,11 +22,11 @@ export function Contact() {
 				intro={
 					<p>
 						Find the campus in Daylesford, Gweru, call the school, or send an admissions enquiry.
-						Families are welcome to ask about grades, the day or boarding pathway, and the
+						Families are welcome to ask about forms, the day or boarding pathway, and the
 						admissions process.
 					</p>
 				}
-				image="/media/students-640.jpg"
+				image="/media/img-1-boy-girl-outside.jpg"
 				imageAlt="Goldphoenix Christian College learners"
 				crumbs={[{ label: 'Contact' }]}
 			>
@@ -74,6 +75,10 @@ export function Contact() {
 					perspective={1100}
 				>
 					<RevealCard as="article" class="contact-card" y={['24%', '0%']} rotateX={[7, 0]} rotateY={[4, 0]}>
+						<CardPhoto
+							src="/media/img-2-passage-boy-girl-outside.jpg"
+							alt="Goldphoenix learners in the school passage"
+						/>
 						<span class="contact-icon">
 							<Icon name="pin" size={25} />
 						</span>
@@ -91,6 +96,10 @@ export function Contact() {
 					</RevealCard>
 
 					<RevealCard as="article" class="contact-card" y={['24%', '0%']} rotateX={[7, 0]} rotateY={[-4, 0]}>
+						<CardPhoto
+							src="/media/img-1-boy-girl-outside.jpg"
+							alt="Goldphoenix learners talking outside"
+						/>
 						<span class="contact-icon">
 							<Icon name="phone" size={25} />
 						</span>
@@ -109,6 +118,10 @@ export function Contact() {
 					</RevealCard>
 
 					<RevealCard as="article" class="contact-card" y={['24%', '0%']} rotateX={[7, 0]} rotateY={[4, 0]}>
+						<CardPhoto
+							src="/media/img%201%20-%202%20girls%20outside.jpg"
+							alt="Goldphoenix learners together outside"
+						/>
 						<span class="contact-icon">
 							<Icon name="mail" size={25} />
 						</span>
@@ -122,6 +135,10 @@ export function Contact() {
 					</RevealCard>
 
 					<RevealCard as="article" class="contact-card" y={['24%', '0%']} rotateX={[7, 0]} rotateY={[-4, 0]}>
+						<CardPhoto
+							src="/media/img%203%20-%20goup%20%20outside.jpeg"
+							alt="A group of Goldphoenix learners outside"
+						/>
 						<span class="contact-icon">
 							<Icon name="facebook" size={25} />
 						</span>
@@ -206,8 +223,8 @@ export function Contact() {
 							title="How can we help?"
 							text={
 								<p>
-									Use the form to prepare an email to the college. Include the grade or form
-									you are asking about and the best way to reach you.
+									Use the form to prepare an email to the college. Include the form you are
+									asking about and the best way to reach you.
 								</p>
 							}
 						/>

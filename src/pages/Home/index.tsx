@@ -15,6 +15,7 @@ import {
 	VALUES,
 } from '../../content/site.js';
 import { withBase } from '../../lib/paths.js';
+import { Logo } from '../../components/Logo.js';
 
 const WebGLHero = lazy(() => import('../../components/WebGLHero.jsx'));
 
@@ -52,12 +53,15 @@ export function Home() {
 					<span class="hero-eyebrow-line" aria-hidden="true" />
 					Daylesford, Gweru · Day &amp; boarding
 				</p>
+				<div className={'teaser-container'}>
+					<Logo className='teaser'></Logo>
+				</div>
 				<h1 class="hero-title">
 					Learning with <span class="accent">purpose.</span>
 				</h1>
 				<p class="hero-lead">
 					A Christian school community in Gweru where strong foundations, character and
-					confidence grow together — from Grade 1 to Form 6.
+					confidence grow together — across Form 1 to Form 6.
 				</p>
 				<div class="hero-actions">
 					<a class="btn btn-gold" href={withBase('/admissions#enquiry')}>
@@ -72,7 +76,7 @@ export function Home() {
 				<ul class="hero-trust">
 					<li>
 						<Icon name="check" size={17} />
-						Grade 1–7 · Form 1–6
+						Form 1–6
 					</li>
 					<li>
 						<Icon name="check" size={17} />
@@ -122,7 +126,7 @@ export function Home() {
 										<Icon name="spark" size={18} />
 									</span>
 									<span>
-										<strong>Learning with Purpose</strong>
+										<strong>Excellence Beyond Expectations</strong>
 										<small>Knowledge · Character · Faith</small>
 									</span>
 								</div>
@@ -139,8 +143,8 @@ export function Home() {
 						<div class="floating-card floating-card-gold">
 							<Icon name="award" size={22} />
 							<span>
-								<strong>Grade 1–7</strong>
-								<small>Primary foundations</small>
+								<strong>Form 1–6</strong>
+								<small>Secondary school</small>
 							</span>
 						</div>
 					</Layer>
@@ -177,7 +181,7 @@ export function Home() {
 
 		<div class="purpose-strip" aria-hidden="true">
 			<Marquee speed={26} velocityBoost={0.5} copies={3}>
-				<span>Learning with purpose</span>
+				<span>Excellence beyond expectations</span>
 				<span class="purpose-dot">·</span>
 				<span>Faith</span>
 				<span class="purpose-dot">·</span>
@@ -201,9 +205,9 @@ export function Home() {
 				<div class="quick-answer">
 					<p class="quick-answer-label">Quick answer</p>
 					<p>
-						Goldphoenix Christian College is a private Christian day and boarding school at 13
-						Claremont Road, Daylesford, Gweru, Zimbabwe. It offers primary education from Grade
-						1–7 and secondary education from Form 1–6.
+						Goldphoenix Christian College is a private Christian boarding and day high school at 13
+						Claremont Road, Daylesford, Gweru, Zimbabwe. It offers secondary education from Form
+						1 to Form 6.
 					</p>
 					<div class="quick-answer-links">
 						<a href={withBase('/academics')}>
@@ -233,7 +237,7 @@ export function Home() {
 					reduced="disable"
 					aria-hidden="true"
 				>
-					<ParallaxImage src={withBase('/media/bg-3.jpg')} alt="" speed={0.08} style={{ height: '100%' }} />
+					<ParallaxImage src={withBase('/media/bg-2.jpeg')} alt="" speed={0.08} style={{ height: '100%' }} />
 				</Layer>
 
 				<Layer
@@ -247,10 +251,10 @@ export function Home() {
 				>
 					<figure class="purpose-scene-photo">
 						<img
-							src={withBase('/media/campus%20no-bg.jpg')}
-							alt="Goldphoenix Christian College campus"
-							width="896"
-							height="1200"
+							src={withBase('/media/img%203%20-%20goup%20%20outside.jpeg')}
+							alt="Goldphoenix learners together outside"
+							width="1020"
+							height="765"
 							loading="lazy"
 							decoding="async"
 						/>
@@ -275,7 +279,7 @@ export function Home() {
 						range={[0, 0.18]}
 						reduced="disable"
 					>
-						<p class="eyebrow eyebrow-light">Learning with purpose</p>
+						<p class="eyebrow eyebrow-light">Excellence beyond expectations</p>
 					</Layer>
 
 					<Layer
@@ -288,7 +292,7 @@ export function Home() {
 						reduced="disable"
 						aria-hidden="true"
 					>
-						<span>Purpose</span>
+						<span>Excellence</span>
 					</Layer>
 
 					<Layer
@@ -362,8 +366,8 @@ export function Home() {
 					<div class="media-stack">
 						<ScrollTilt className="media-stack-main" max={7} perspective={950}>
 							<ParallaxImage
-								src={withBase('/media/students-640.jpg')}
-								alt="Goldphoenix learners together on campus"
+								src={withBase('/media/img%200%20-%20boy%20in%20class.jpg')}
+								alt="A Goldphoenix learner in class"
 								speed={0.16}
 								style={{ height: '100%' }}
 							/>
@@ -372,7 +376,7 @@ export function Home() {
 							<img src={withBase(SITE.logoSmall)} alt="" width="54" height="51" />
 							<span>
 								<strong>One community</strong>
-								<small>Grade 1 to Form 6</small>
+								<small>Form 1 to Form 6</small>
 							</span>
 						</div>
 						<div class="media-stack-dots" aria-hidden="true" />
@@ -423,11 +427,11 @@ export function Home() {
 			<div class="container">
 				<SectionHeading
 					eyebrow="Learning pathways"
-					title="From first foundations to the next step."
+					title="From Form 1 to the next step."
 					text={
 						<p>
-							A connected school journey gives learners room to build confidence, go deeper and
-							discover what they can do.
+							A connected secondary school journey gives learners room to build confidence, go
+							deeper and discover what they can do.
 						</p>
 					}
 					link={{ href: '/academics', label: 'See the academic programme' }}
@@ -477,7 +481,7 @@ export function Home() {
 					>
 						An education that shapes how learners think, choose, serve and lead.
 					</SplitText>
-					<p class="statement-attribution">The Goldphoenix approach to learning with purpose.</p>
+					<p class="statement-attribution">The Goldphoenix standard: excellence beyond expectations.</p>
 				</div>
 			</div>
 		</section>

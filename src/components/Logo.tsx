@@ -1,20 +1,20 @@
 import { SITE } from '../content/site.js';
 import { withBase } from '../lib/paths.js';
 
-export function Logo({ compact = false }: { compact?: boolean }) {
+export function Logo({ compact = false, className }: { compact?: boolean, className?:string }) {
 	return (
-		<span class="logo">
+		<span class={`logo ${className}`}>
 			<img
-				class="logo-crest"
+				class={`logo-crest ${className}-logo`}
 				src={withBase(SITE.logoSmall)}
 				alt=""
 				width="44"
 				height="41"
 				decoding="async"
 			/>
-			<span class="logo-text">
-				<span class="logo-name">Goldphoenix</span>
-				{!compact && <span class="logo-sub">Christian College</span>}
+			<span class={`logo-text ${className}-text`}>
+				<span class={`logo-name ${className}-main-text`}>Goldphoenix</span>
+				{!compact && <span class={`logo-sub ${className}-sub-text`}>Christian College</span>}
 			</span>
 		</span>
 	);

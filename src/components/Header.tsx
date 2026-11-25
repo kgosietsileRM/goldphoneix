@@ -22,7 +22,7 @@ export const BaseHeader = () => {
 }
 
 
-export function Header() {
+export function Header({headerLogoOpac=0}) {
 	const { url } = useLocation();
 	const path = normalizePath(stripBase(url));
 	const [open, setOpen] = useState(false);
@@ -52,7 +52,7 @@ export function Header() {
 				<div class="container utility-inner">
 					<p class="utility-note">
 						<span class="status-dot" aria-hidden="true" />
-						Day &amp; boarding · Grade 1–7 · Form 1–6 · Gweru, Zimbabwe
+						Day &amp; boarding · Form 1–6 · Gweru, Zimbabwe
 					</p>
 					<div class="utility-links">
 						<a href={`tel:${SITE.phones[0].replace(/\s/g, '')}`}>
@@ -72,11 +72,11 @@ export function Header() {
 
 			<div class="navbar">
 				<div class="container navbar-inner">
-					<a class="brand" href={withBase('/')} aria-label="Goldphoenix Christian College home">
+					<a class="brand headerLogo" href={withBase('/')} aria-label="Goldphoenix Christian College home" style={{opacity:headerLogoOpac}}>
 						<Logo />
 					</a>
 
-					<nav class="desktop-nav" aria-label="Primary">
+					<nav class="desktop-nav" aria-label="Main navigation">
 						{NAV.map((item) => (
 							<a
 								href={withBase(item.href)}

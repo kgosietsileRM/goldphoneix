@@ -105,7 +105,7 @@ export function Results() {
 						{!signedIn ? (
 							<div class="portal-login">
 								<div class="portal-head">
-									<img src={withBase('/media/crest-128.png')} alt="" width="56" height="53" />
+									<img src={withBase('/media/logo-100.svg')} alt="" width="56" height="53" />
 									<div>
 										<p class="eyebrow">Goldphoenix portal</p>
 										<h2>Sign in to the demo</h2>
@@ -166,7 +166,7 @@ export function Results() {
 							<div class="report">
 								<div class="report-head">
 									<div class="report-brand">
-										<img src={withBase('/media/crest-128.png')} alt="" width="52" height="49" />
+										<img src={withBase('/media/logo-100.svg')} alt="" width="52" height="49" />
 										<div>
 											<strong>Goldphoenix Christian College</strong>
 											<span>Sample academic report</span>

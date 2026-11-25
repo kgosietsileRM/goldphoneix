@@ -16,7 +16,7 @@ type CtaBandProps = {
 export function CtaBand({
 	eyebrow = 'Next step',
 	title = 'Come and see what purposeful learning looks like.',
-	text = 'Talk with the college about your child’s grade, the day or boarding pathway, and the admissions process.',
+	text = 'Talk with the college about the form you are considering, the day or boarding pathway, and the admissions process.',
 	primaryHref = '/admissions#enquiry',
 	primaryLabel = 'Start an enquiry',
 	secondaryHref = `tel:${SITE.phones[0].replace(/\s/g, '')}`,
@@ -32,7 +32,7 @@ export function CtaBand({
 				reduced="disable"
 				aria-hidden="true"
 			>
-				<img src={withBase('/media/bg-2.jpg')} alt="" loading="lazy" decoding="async" />
+				<img src={withBase('/media/bg-2.jpeg')} alt="" loading="lazy" decoding="async" />
 			</Layer>
 			<Layer
 				class="cta-band-pattern"

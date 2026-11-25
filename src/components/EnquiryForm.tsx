@@ -2,14 +2,7 @@ import { useState } from 'preact/hooks';
 import { SITE } from '../content/site.js';
 import { Icon } from './Icon.jsx';
 
-const grades = [
-	'Grade 1',
-	'Grade 2',
-	'Grade 3',
-	'Grade 4',
-	'Grade 5',
-	'Grade 6',
-	'Grade 7',
+const forms = [
 	'Form 1',
 	'Form 2',
 	'Form 3',
@@ -24,23 +17,23 @@ export function EnquiryForm() {
 
 	const handleSubmit = (event: Event) => {
 		event.preventDefault();
-		const form = event.currentTarget as HTMLFormElement;
-		const data = new FormData(form);
+		const formElement = event.currentTarget as HTMLFormElement;
+		const data = new FormData(formElement);
 		const parentName = String(data.get('parentName') ?? '').trim();
 		const learnerName = String(data.get('learnerName') ?? '').trim();
 		const email = String(data.get('email') ?? '').trim();
 		const phone = String(data.get('phone') ?? '').trim();
-		const grade = String(data.get('grade') ?? '').trim();
+		const formLevel = String(data.get('form') ?? '').trim();
 		const pathway = String(data.get('pathway') ?? '').trim();
 		const message = String(data.get('message') ?? '').trim();
 
-		const subject = `Admissions enquiry: ${learnerName || 'New learner'}${grade ? ` (${grade})` : ''}`;
+		const subject = `Admissions enquiry: ${learnerName || 'New learner'}${formLevel ? ` (${formLevel})` : ''}`;
 		const body = [
 			`Parent or guardian: ${parentName}`,
 			`Learner: ${learnerName}`,
 			`Email: ${email}`,
 			`Phone: ${phone}`,
-			`Grade or form: ${grade}`,
+			`Form: ${formLevel}`,
 			`Preferred pathway: ${pathway}`,
 			'',
 			'Message:',
@@ -89,13 +82,13 @@ export function EnquiryForm() {
 
 				<div class="form-row">
 					<label class="field">
-						<span>Grade or form</span>
-						<select name="grade" required defaultValue="">
+						<span>Form</span>
+						<select name="form" required defaultValue="">
 							<option value="" disabled>
-								Select a grade or form
+								Select a form
 							</option>
-							{grades.map((grade) => (
-								<option value={grade}>{grade}</option>
+							{forms.map((form) => (
+								<option value={form}>{form}</option>
 							))}
 						</select>
 					</label>

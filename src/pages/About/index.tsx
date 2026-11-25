@@ -33,9 +33,9 @@ export function About() {
 				title="A Christian learning community in the heart of Gweru."
 				intro={
 					<p>
-						Goldphoenix Christian College is a private Christian day and boarding school in
-						Daylesford, Gweru. Our purpose is simple: learning with purpose, from Grade 1–7 and
-						Form 1–6.
+						Goldphoenix Christian College is a private Christian boarding and day high school in
+						Daylesford, Gweru. Our motto is Excellence Beyond Expectations, from Form 1 to Form
+						6.
 					</p>
 				}
 				image={SITE.campusImage}
@@ -57,7 +57,7 @@ export function About() {
 					<div class="split-copy">
 						<SectionHeading
 							eyebrow="Our purpose"
-							title="Learning with purpose is a promise about the whole learner."
+							title="Excellence beyond expectations is a promise about the whole learner."
 							text={
 								<>
 									<p>
@@ -67,7 +67,7 @@ export function About() {
 									</p>
 									<p>
 										The college serves families in Gweru and beyond, with day and boarding
-										pathways for primary and secondary learners. Families are encouraged to speak
+										pathways for Form 1–6 learners. Families are encouraged to speak
 										directly with the school about current arrangements, available places and the
 										best fit for their child.
 									</p>
@@ -77,7 +77,7 @@ export function About() {
 						<div class="proof-list">
 							<div>
 								<Icon name="check" size={18} />
-								<span>Grade 1–7 primary and Form 1–6 secondary</span>
+								<span>Form 1–6 secondary education</span>
 							</div>
 							<div>
 								<Icon name="check" size={18} />
@@ -93,8 +93,8 @@ export function About() {
 						<div class="media-stack about-media">
 							<ScrollTilt className="media-stack-main" max={7} perspective={950}>
 								<ParallaxImage
-									src={withBase('/media/campus-560.jpg')}
-									alt="Goldphoenix Christian College campus building"
+									src={withBase('/media/img%200%20-%203%20girls%20outside.jpg')}
+									alt="Goldphoenix learners together outside"
 									speed={0.14}
 									style={{ height: '100%' }}
 								/>
@@ -165,7 +165,7 @@ export function About() {
 						text={
 							<p>
 								The college’s leadership and teaching teams guide learning, pastoral care and the
-								Christian ethos across primary and secondary.
+								Christian ethos across Form 1 to Form 6.
 							</p>
 						}
 						light
@@ -234,7 +234,7 @@ export function About() {
 
 			<CtaBand
 				title="Want to know if Goldphoenix is the right fit?"
-				text="Speak with the admissions team about your child’s grade, the day or boarding pathway, and the next steps."
+				text="Speak with the admissions team about the form, the day or boarding pathway, and the next steps."
 			/>
 		</>
 	);

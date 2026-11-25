@@ -14,12 +14,12 @@ export function FAQ() {
 				title="Answers for families, in one place."
 				intro={
 					<p>
-						Find clear answers about grades, day and boarding, admissions, the demonstration
+						Find clear answers about forms, day and boarding, admissions, the demonstration
 						results portal, and contacting Goldphoenix Christian College.
 					</p>
 				}
-				image="/media/campus-560.jpg"
-				imageAlt="Goldphoenix Christian College campus"
+				image="/media/img%201%20-%203%20girls%20outside%20v2.jpg"
+				imageAlt="Goldphoenix learners outside"
 				crumbs={[{ label: 'FAQ' }]}
 			/>
 
@@ -66,7 +66,7 @@ export function FAQ() {
 
 			<CtaBand
 				title="Couldn’t find your answer?"
-				text="The college can help with admissions, grades, boarding arrangements and current school information."
+				text="The college can help with admissions, forms, boarding arrangements and current school information."
 			/>
 		</>
 	);

@@ -1,4 +1,5 @@
 import { ScrollTilt } from 'pax3d/react';
+import { CardPhoto } from '../../components/CardPhoto.jsx';
 import { CtaBand } from '../../components/CtaBand.jsx';
 import { EnquiryForm } from '../../components/EnquiryForm.jsx';
 import { FaqList } from '../../components/FaqList.jsx';
@@ -18,12 +19,12 @@ export function Admissions() {
 				title="A clear, personal start to the conversation."
 				intro={
 					<p>
-						Enquiries are welcome for Grade 1–7 and Form 1–6, including day and boarding pathways.
-						Tell the college a little about your learner and the team can explain the next steps.
+						Enquiries are welcome for Form 1–6, including day and boarding pathways. Tell the
+						college a little about your learner and the team can explain the next steps.
 					</p>
 				}
-				image="/media/campus.jpg"
-				imageAlt="Goldphoenix Christian College campus in Gweru"
+				image="/media/img-2-passage-boy-girl-outside.jpg"
+				imageAlt="Goldphoenix learners in the school passage"
 				crumbs={[{ label: 'Admissions' }]}
 			>
 				<a class="btn btn-gold" href="#enquiry">
@@ -78,6 +79,7 @@ export function Admissions() {
 					<RevealGrid as="ol" className="steps-grid" amount={0.07} perspective={1100}>
 						{ADMISSION_STEPS.map((step) => (
 							<RevealCard as="li" class="step-card" y={['28%', '0%']} rotateX={[8, 0]}>
+								<CardPhoto src={step.image} alt={step.alt} />
 								<span class="step-number">{step.step}</span>
 								<h3>{step.title}</h3>
 								<p>{step.text}</p>
@@ -141,8 +143,8 @@ export function Admissions() {
 							title="Tell us about your learner."
 							text={
 								<p>
-									Share the grade or form you are considering and your preferred pathway. The
-									form prepares an email for you to review and send.
+									Share the form you are considering and your preferred pathway. The form
+									prepares an email for you to review and send.
 								</p>
 							}
 						/>
@@ -182,8 +184,8 @@ export function Admissions() {
 							title="A few things families often ask."
 							text={
 								<p>
-									If your question is not here, the full FAQ page covers grades, day and
-									boarding, the results portal and contact details.
+									If your question is not here, the full FAQ page covers forms, day and boarding,
+									the results portal and contact details.
 								</p>
 							}
 							link={{ href: '/faq', label: 'Read all FAQs' }}
@@ -195,7 +197,7 @@ export function Admissions() {
 
 			<CtaBand
 				title="Ready to take the next step?"
-				text="The admissions team can talk you through the grade, pathway, documents and timing."
+				text="The admissions team can talk you through the form, pathway, documents and timing."
 				primaryLabel="Go to the enquiry form"
 				primaryHref="#enquiry"
 				secondaryHref={`mailto:${SITE.email}`}

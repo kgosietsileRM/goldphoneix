@@ -12,10 +12,10 @@ export function Footer() {
 					<a href={withBase('/')} class="footer-logo" aria-label="Goldphoenix Christian College home">
 						<Logo />
 					</a>
-					<p class="footer-tagline">Learning with Purpose</p>
+					<p class="footer-tagline">Excellence Beyond Expectations</p>
 					<p class="footer-copy">
-						A private Christian day and boarding school in Daylesford, Gweru, offering Grade 1–7
-						and Form 1–6.
+						A private Christian boarding and day high school in Daylesford, Gweru, offering Form 1–6
+						secondary education.
 					</p>
 					<a
 						class="footer-social"

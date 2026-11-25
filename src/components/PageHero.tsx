@@ -95,7 +95,7 @@ export function PageHero({
 											style={{ height: '100%' }}
 										/>
 										<span class="page-hero-media-badge">
-											<img src={withBase('/media/crest-128.png')} alt="" width="44" height="41" />
+											<img src={withBase('/media/logo-100.svg')} alt="" width="44" height="41" />
 											<span>
 												<strong>Goldphoenix</strong>
 												<small>Christian College</small>

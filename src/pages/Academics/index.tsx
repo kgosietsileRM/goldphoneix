@@ -46,11 +46,11 @@ export function Academics() {
 		<>
 			<PageHero
 				eyebrow="Academics"
-				title="Foundations first. Then depth, confidence and direction."
+				title="Depth, confidence and direction from Form 1 to Form 6."
 				intro={
 					<p>
-						Goldphoenix Christian College offers primary learning from Grade 1–7 and secondary
-						learning from Form 1–6, with purposeful teaching and support at every stage.
+						Goldphoenix Christian College offers secondary learning from Form 1 to Form 6, with
+						purposeful teaching and support at every stage.
 					</p>
 				}
 				image={SITE.heroImage}
@@ -61,8 +61,8 @@ export function Academics() {
 					Ask about a place
 					<Icon name="arrow-up-right" size={18} />
 				</a>
-				<a class="btn btn-ghost-light" href="#primary">
-					Explore the stages
+				<a class="btn btn-ghost-light" href="#secondary">
+					Explore Form 1–6
 					<Icon name="chevron-down" size={18} />
 				</a>
 			</PageHero>
@@ -71,73 +71,19 @@ export function Academics() {
 				<div class="container quick-answer-grid">
 					<div>
 						<p class="eyebrow">Academic overview</p>
-						<h2 class="quick-answer-title">One school, two connected stages.</h2>
+						<h2 class="quick-answer-title">One secondary school, a clear journey.</h2>
 					</div>
 					<div class="quick-answer">
 						<p class="quick-answer-label">Quick answer</p>
 						<p>
-							Primary school covers Grade 1–7 and focuses on literacy, numeracy and strong
-							foundations. Secondary school covers Form 1–6 and builds subject depth, independent
-							study and preparation for the next step.
+							Form 1–6 builds subject depth, independent study habits and preparation for the
+							next step, with purposeful teaching and support at every stage.
 						</p>
 						<div class="quick-answer-links">
-							<a href="#primary">
-								<Icon name="primary" size={17} />
-								Primary · Grade 1–7
-							</a>
 							<a href="#secondary">
 								<Icon name="secondary" size={17} />
 								Secondary · Form 1–6
 							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="section stage-section" id="primary">
-				<div class="container stage-grid">
-					<div class="stage-copy">
-						<p class="stage-label">Primary · Grade 1–7</p>
-						<h2>Building the confidence to learn.</h2>
-						<p>
-							The primary years are where curiosity, reading, number sense and good learning
-							habits take root. Learners are guided with clear routines, encouragement and
-							age-appropriate challenge.
-						</p>
-						<div class="stage-points">
-							<div>
-								<Icon name="check" size={18} />
-								<span>Literacy and numeracy foundations</span>
-							</div>
-							<div>
-								<Icon name="check" size={18} />
-								<span>Curiosity, creativity and physical activity</span>
-							</div>
-							<div>
-								<Icon name="check" size={18} />
-								<span>Care, routines and positive relationships</span>
-							</div>
-						</div>
-						<a class="text-link" href={withBase('/admissions#enquiry')}>
-							Ask about primary admissions
-							<Icon name="arrow-right" size={17} />
-						</a>
-					</div>
-					<div class="stage-media">
-						<ScrollTilt className="stage-media-frame" max={6} perspective={950}>
-							<ParallaxImage
-								src={withBase('/media/students%20in%20classroom.jpg')}
-								alt="Primary learners in a classroom at Goldphoenix Christian College"
-								speed={0.13}
-								style={{ height: '100%' }}
-							/>
-						</ScrollTilt>
-						<div class="stage-media-tag">
-							<Icon name="primary" size={20} />
-							<span>
-								<strong>Grade 1–7</strong>
-								<small>Primary school</small>
-							</span>
 						</div>
 					</div>
 				</div>
@@ -168,15 +114,15 @@ export function Academics() {
 							</div>
 						</div>
 						<a class="text-link" href={withBase('/admissions#enquiry')}>
-							Ask about secondary admissions
+							Ask about admissions
 							<Icon name="arrow-right" size={17} />
 						</a>
 					</div>
 					<div class="stage-media">
 						<ScrollTilt className="stage-media-frame" max={6} perspective={950}>
 							<ParallaxImage
-								src={withBase('/media/campus.jpg')}
-								alt="Secondary school grounds at Goldphoenix Christian College"
+								src={withBase('/media/students%20in%20classroom.jpg')}
+								alt="Goldphoenix learners in the classroom"
 								speed={0.13}
 								style={{ height: '100%' }}
 							/>
@@ -185,7 +131,7 @@ export function Academics() {
 							<Icon name="secondary" size={20} />
 							<span>
 								<strong>Form 1–6</strong>
-								<small>Secondary school</small>
+								<small>Secondary education</small>
 							</span>
 						</div>
 					</div>
@@ -277,8 +223,8 @@ export function Academics() {
 						</span>
 						<h2>Preparation for the next step.</h2>
 						<p>
-							From primary into secondary and beyond, the goal is a learner who is ready to make
-							thoughtful choices with confidence.
+										Across Form 1 to Form 6 and beyond, the goal is a learner who is ready to make
+										thoughtful choices with confidence.
 						</p>
 					</RevealCard>
 				</RevealGrid>
@@ -286,7 +232,7 @@ export function Academics() {
 
 			<CtaBand
 				title="Questions about the academic programme?"
-				text="Speak with the college about the grade or form you are considering, subject options and available places."
+				text="Speak with the college about the form you are considering, subject options and available places."
 			/>
 		</>
 	);
